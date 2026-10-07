@@ -163,16 +163,28 @@
           <div class="field-row"><label>Full name<input type="text" name="name" required autocomplete="name" placeholder="Your name"></label><label>Phone number<input type="tel" name="phone" required autocomplete="tel" placeholder="09XX XXX XXXX"></label></div>
           <label>Email address<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
           <div class="field-row"><div class="field-row">
-  <label>
-    Start Date
-    <input type="date" name="startDate" required>
-  </label>
+  <div class="field-row">
+    <label>
+        Check-In Date
+        <input type="date" name="startDate" required>
+    </label>
 
-  <label>
-    End Date
-    <input type="date" name="endDate" required>
-  </label>
-</div><label>Number of guests<input type="number" name="guests" min="1" required placeholder="e.g. 20"></label></div>
+    <label>
+        Check-Out Date
+        <input type="date" name="endDate" required>
+    </label>
+</div>
+
+<label>
+    Number of Guests
+    <input
+        type="number"
+        name="guests"
+        min="1"
+        placeholder="e.g. 25"
+        required>
+</label>
+</div>
           <label>Type of booking<select name="booking"><option>Staycation</option><option>Birthday</option><option>Wedding</option><option>Family reunion</option><option>Private event</option><option>Other</option></select></label>
           <label>Message<textarea name="message" rows="4" placeholder="Tell us more about your plans"></textarea></label>
           <a
@@ -202,6 +214,6 @@
   target="_blank"
   rel="noopener"
 >
-  💬
+  💬 Message Us
 </body>
 </html>
