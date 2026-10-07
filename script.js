@@ -12,8 +12,6 @@ function closeLightbox(){lightbox.hidden=true;lightboxImg.src='';document.body.s
 lightbox.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
 lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!lightbox.hidden)closeLightbox()});
-document.getElementById('bookingForm').addEventListener('submit',e=>{
-  e.preventDefault();
   const data=new FormData(e.currentTarget);
   const subject=encodeURIComponent(`Reservation inquiry - ${data.get('booking')}`);
   const body=encodeURIComponent(`Hello Inocencia Private Resort,\n\nI would like to inquire about a reservation.\n\nName: ${data.get('name')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')}\nPreferred date: ${data.get('date')}\nNumber of guests: ${data.get('guests')}\nBooking type: ${data.get('booking')}\n\nMessage:\n${data.get('message')||'No additional message'}\n\nThank you.`);
